@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お知らせ詳細</title>
+</head>
+<body>
+    <div class="sec__notice">
+        
+        <div class="notilce">
+                <h2 class="notilce__list-details-title">{{article.title}} </h2>
+                <p class="notilce__list-details-date"><span>更新日:</span>{{article.create_date}}</p>
+                <p class="notilce__list-details-content">{{article.content}}</p>
+        </div>
+        <p class="notice__back"><a href="{% url 'notice:list' %}">お知らせ一覧へ戻る</a></p>
+    </div>
+</body>
+</html>t

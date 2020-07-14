@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お知らせ</title>
+</head>
+<body>
+
+    <div class="sec__notice">
+        <div class="notilce">
+            <ul class="notilce__list">
+                {% for Article in latest_list %}
+                <li class="notilce__list-ldetails">
+                    <a href="{% url 'notice:detail' Article.id %}">
+                        <h2 class="notilce__list-details-title">{{Article.title}} </h2>
+                        <p class="notilce__list-details-date"><span>更新日:</span>{{Article.create_date}}</p>
+                        <p class="notilce__list-details-content">{{Article.content}}</p>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
