@@ -21,4 +21,5 @@ urlpatterns = [
     path('myapp/',include('myapp.urls')),
     path('myapp/',include('django.contrib.auth.urls')),
     path('notice/',include('notice.urls')),
+    path('diary/',include('diary.urls')),
 ]
