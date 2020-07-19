@@ -18,10 +18,11 @@ def index(request):
 def home(request):
     return render(request,'myapp/home.html')
     
+    
 class SignUp(CreateView):
     form_class = SignUpForm
     template_name = 'myapp/signup.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('myapp:home')
 
     def form_valid(self, form):
         user = form.save()

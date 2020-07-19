@@ -21,21 +21,13 @@
         }
     </style>
     <p><a href="{% url 'myapp:home' %}">ホームに戻る</a></p>
-    <p><a href="{% url 'diary:create' %}">デイリーを作成する</a></p>
-    <h1>デイリーのトップページ</h1>
+    <h1>デイリーの新規作成</h1>
     <div class="sec__diary">
         <div class="diary">
-            <ul class="diary__list">
-                {% for diary in diary_list %}
-                <li class="diary__list-item">
-                    <a href="{{ diary.id}}">
-                       <h2>{{diary.title}}</h2>
-                      <p>{{diary.content}}</p>
-                      <p>{{diary.create_date}}</p>
-                    </a>
-                </li>
-                {% endfor %}
-            </ul>
+            <div class="diary__create">
+                {% csrf_token %}
+                {{ from }}
+            </div>
         </div>
         
     </div>

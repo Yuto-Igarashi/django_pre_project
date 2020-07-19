@@ -8,6 +8,7 @@
 <body>
     <h1>ホーム画面</h1>
     <p>こんにちは{{user.username}}さん</p>
+    <p><a href="{% url 'diary:index' %}">日記ページにいくでやんす</a></p>
     <p><a href="{% url 'logout' %}">ログアウト</a></p>
 </body>
 </html>
